@@ -1,0 +1,764 @@
+
+@media(max-width: 1024px){
+  .top-artists-section {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+  }
+  .top-artist {
+    padding: 32px !important;
+  }
+  .top-main h3 {
+    font-size: 32px;
+  }
+  .top-main {
+    background-color: #262626;
+     /* Trochę większy, żeby się wyróżniał */
+    margin-top: 0;
+    width: 55%;
+
+    order: -1;
+
+  }
+  .top-main img, #top-artist-3 img, #top-artist-2 img{
+    width: 55%;
+
+  }
+
+ 
+  #top-artist-2 {
+     
+    margin-top: 0;
+    width: 35%;
+    flex-grow: 1;
+  }
+
+ 
+  #top-artist-3 {
+    margin-top: 0;
+    width: 35%;
+    flex-grow: 1; 
+
+  }
+  .user-artists-grid .top-artist {
+    width: 25%;
+    padding: 16px !important /* 3 w rzędzie */
+  }
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    
+  
+    /* --- Reset / podstawowe style w widoku mobilnym --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    ul, li {
+      list-style: none;
+    }
+  
+    a {
+      text-decoration: none;
+      color: white; /* możesz zmienić na inny kolor */
+    }
+  
+    /* --- Mobilne menu off-screen --- */
+    .off-screen-menu {
+      background-color: #4D4D4D;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      transition: 0.3s ease;
+      z-index: 9998; /* Niższy niż hamburger i nav */
+    }
+  
+    .off-screen-menu.active {
+      right: 0;
+    }
+  
+    .off-screen-menu ul li {
+      margin: 32px 0;
+    }
+  
+    /* --- Pasek nawigacji (nav) mobilny --- */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;  /* klucz do pionowego wyśrodkowania */
+      justify-content: space-between;
+      background-color: #262626;  /* przykładowy kolor */
+      padding: 8px 16px;          /* odstęp góra/dół: 8px, boki: 16px */
+      height: 58px;
+      z-index: 9999;
+    }
+  
+    .logo-container img {
+      margin-top: -24px;
+      width: 100px;
+      height: 32px;
+      object-fit:contain;
+      
+    }
+  
+    /* --- Hamburger --- */
+    .ham-menu {
+      width: 32px;
+      height: 32px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .ham-menu span {
+      height: 5px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 25px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease;
+    }
+  
+    .ham-menu span:nth-child(1) {
+      top: 25%;
+    }
+  
+    .ham-menu span:nth-child(3) {
+      top: 75%;
+    }
+  
+    /* Animacja X */
+    .ham-menu.active span {
+      background-color: #1ED65F;
+    }
+  
+    .ham-menu.active span:nth-child(1) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    .ham-menu.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .ham-menu.active span:nth-child(3) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    .no-scroll {
+      overflow-y: hidden;
+      touch-action: none; /* dla pewnych starszych urządzeń */
+    }
+  
+    /* --- Margines górny, by treść nie chowała się pod nav --- */
+    body {
+      margin-top: 56px; /* Równe height paska nawigacji */
+      padding: 0 16px; /* Adjust padding for mniejsze ekrany */
+    }
+  
+    .hero-banner {
+      margin: 80px auto; /* Adjust margin for mniejsze ekrany */
+      gap: 8px; /* Odstępy między elementami hero */
+      
+    }
+  
+    .menu-fixed-container {
+      top: 56px; /* Zmniejszone dla menu mobilnego */
+    }
+  
+    .hero-text-center {
+      font-size: 32px; /* Reduced font size for h1 */
+      color: white;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  
+    .hero-text-left {
+      display: none;
+    }
+  
+    .hero-text-right {
+      position: static;
+      bottom: 0;
+      right: 0;
+      font-size: 16px;
+      text-align: center;
+      color: white;
+    }
+  
+    .hero-image {
+      margin-top: 24px; /* Adjust margin for mniejsze ekrany */
+    }
+    .hero-image-stats{
+      margin-top: 24px;
+    }
+    .features-container {
+      margin-top: 100px;
+      gap: 32px;
+    }
+  
+    
+    .features-header {
+        /* Podobna struktura jak w .info-section */
+        margin-top: 0; /* Jeśli chcesz przesunąć w górę/dół */
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+        gap: 24px; /* Odstęp między elementami */
+      }
+    
+      .features-header h2 {
+        font-size: 24px; /* Pomniejszamy w stosunku do desktopa */
+      }
+    
+      .features-header p {
+        font-size: 16px;
+        /* Możesz dodać line-height, np. line-height: 1.4; */
+      }
+    /* --- Feature2 --- */
+    .feature2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .feature-content2 {
+        width: 100%;
+        text-align: center;
+        height: auto;
+
+        border-radius: 0px 0px 8px 8px;
+        padding: 16 16px 24px 16px;
+        justify-content: left;
+
+      }
+    
+      .feature-text2 {
+        width: 100%;
+        gap: 16px;
+      }
+    
+      .feature-image2 {
+        position: static;
+        width: 100%;
+        height: 180px;
+        margin-right: 0px;
+      }
+
+      .feature-image2 img {
+        border-radius: 8px 8px 0px 0px;
+        object-fit: cover;
+      }
+    
+      /* --- Feature --- */
+      .feature {
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .feature-content {
+        position:static;
+        width: 100%;
+        text-align: center;
+        height: auto;
+        border-radius: 0px 0px 8px 8px;
+        padding: 16 16px 24px 16px;
+        
+        justify-content: left;
+      }
+    
+      .feature-text {
+        width: 100%;
+        gap: 16px;
+      }
+    
+      .feature-image {
+        position: static; /* Resetujemy absolute dla mobilnych */
+        width: 100%;
+        height: 180px;
+        margin-left: 0px;
+        
+      }
+      .feature-image img {
+        border-radius: 8px 8px 0px 0px;
+        object-fit: cover;
+      }
+
+      .feature-text2 h3,.feature-text h3{
+        font-size: 20px;
+      }
+      .feature-text2 p,.feature-text p{
+        font-size: 16px;
+      }
+      
+      .service-button, .service-button2 {
+        margin-top: 8px;
+      }
+
+      
+
+      
+
+
+      /* Sekcja informacyjna pod hero */
+.info-section {
+    margin-top: -30px;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+  }
+  
+  .info-text {
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Ustawia elementy jeden pod drugim */
+    gap: 24px; /* Ustawia odstęp 32px między elementami wewnątrz */
+  }
+
+  
+  
+  
+  .info-text h2 {
+    font-size: 24px;
+    
+  }
+  
+  .info-text p {
+    
+    font-size:16px;
+    
+    
+  }
+  
+  .green-button {
+    margin-top: 24px;
+  
+  }
+  
+  .green-button:hover {
+    background-color: #17b851;
+  }
+  
+  .info-image {
+    
+    width: 65%;
+    text-align: center; /* Jeśli chcesz wyśrodkować np. zdjęcie w pionie */
+  }
+  
+  .info-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+  }
+  
+
+
+  /* stopka */
+
+  .site-footer {
+    margin-top: 100px;
+    
+  }
+ 
+  .footer-top {
+    flex-direction: column;
+    gap: 32px;
+    padding: 16px;
+  }
+  .footer-col1,.footer-col {
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-description {
+    font-size: 16px;
+  }
+  .footer-logo {   /* dostosuj w razie potrzeby */
+    height: 64px;
+    width: 128px;
+    object-fit: contain;
+  }
+  .site-footer h3 {
+    font-size: 20px;
+  }
+
+  
+
+  .footer-col ul {
+    margin: -24px 0px -24px 0px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center; /* 2 paragrafy: lewy i prawy */
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    margin-top: 24px 0px; /* mały odstęp pod .footer-top */
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+/* top artists */
+  .top-artists-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px !important;
+    margin-top: -25px;
+  }
+
+  .top-artist {
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 16px !important;
+  }
+
+  .top-main {
+    width: 100%;
+  }
+  .top-main h3 {
+    font-size: 24px !important;
+  }
+
+  #top-artist-2, #top-artist-3 {
+    width: 100%;
+  }
+  .top-main img, #top-artist-3 img, #top-artist-2 img{
+    
+    max-height: 240px;
+  }
+  
+  #artists-table {
+    display: none; /* Ukrywamy tabelę na telefonach */
+}
+
+  .artist-grid {
+    display: grid; /* Pokazujemy kafelki */
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;  /* Ustawienie elementów w lewo */
+}
+
+.artist-grid {
+  display: flex;       /* Usunięto display: none; */
+  flex-wrap: wrap;     /* Dzięki temu kafelki zawijają się do nowej linii */
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.artist-card {
+  background-color: #4D4D4D; /* Ewentualnie red, jeśli testujesz */
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 45%;
+  max-width: 100%;
+  flex-grow: 1; /* !important nie jest konieczne, usuń je dla czystości kodu */
+}
+
+/* =============================================================== */
+/* STYL DLA PODSTRONY: co_sie_teraz_slucha.html (JEDEN KAFELEK)    */
+/* =============================================================== */
+
+/* Sekcja, w której jest nasz kafelek */
+.single-song-section {
+  margin-top: -100px;
+  gap: 24px;       /* odstęp między tytułem h2 a kafelkiem */
+  
+}
+
+
+#topsongimage {
+  margin-top: -24px;
+}
+
+.single-song-title {
+  font-size: 18px;
+  width: 60%;
+  line-height: 28px;
+}
+
+/* Główny kontener kafelka */
+.single-song-card {
+     /* tło kafelka */
+  max-width: 100%;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  gap: 24px;
+  text-align: center;
+}
+
+/* Okładka utworu */
+.single-song-cover img {
+  height: 240px;
+  object-fit: cover;
+  
+}
+
+/* Nazwa piosenki */
+.single-song-name {
+  font-size: 20px;
+  
+  
+}
+
+/* Metadane (album, artyści, data) */
+.single-song-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  color: #ccc; /* jasna szarość */
+}
+
+.single-song-artists,
+.single-song-album,
+.single-song-release {
+  font-size: 14px;
+}
+
+
+.my-playlist-embed {
+  
+  height: 470px;         /* wysokość np. jak w Twoim przykładzie */
+         
+}
+
+/* =================analiza playlist============================================== */
+
+
+.playlist-analysis-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.track-list {
+  width: 100%;
+  max-height: 378px;
+}
+
+.track-details {
+  width: 100%;
+  min-height: 0px;
+  height: auto;
+  padding: 12px;
+}
+
+.track-details img {
+  max-width: 150px;
+}
+
+.track-details h3 {
+  font-size: 18px;
+}
+
+.track-details p {
+  font-size: 14px;
+}
+
+/* Styl przycisku powrotu */
+.back-to-list {
+  display: block;
+  text-align: left;
+  color: #1ED65F;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 24px;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.playlist-controls {
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.playlist-controls .green-button {
+  align-self: center;
+  margin-top: 0px;
+}
+
+.loader {
+  margin-top: 48px;
+}
+
+.track-item {
+  line-height: 23px;
+}
+
+/* Ukrycie placeholdera "Wybierz Utwór" na telefonach */
+
+/* Nagłówek nad kafelkiem */
+.playlist-top-artist-heading {
+  
+  font-size: 24px;
+
+
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+/* Kafelek */
+.playlist-top-artist-card {
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+}
+
+.playlist-top-artist-card img {
+  width: 55%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Nazwa artysty */
+.playlist-artist-name {
+  font-size: 20px;
+}
+
+/* Liczba wystąpień */
+.playlist-artist-count {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.playlist-container {
+  margin-top: -50px;
+}
+
+#playlist-genres-section {
+  margin-top: 75px;
+  padding: 0px;
+  align-items: center;
+  
+}
+
+#playlist-genres-section {
+  gap: 16px;
+}
+.playlist-genres-heading {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.playlist-genres-chart-container {
+  width: 100%;
+  padding: 0px;
+  
+}
+
+canvas#genresChart {
+  max-width: 90vw;
+  max-height: 90vw;
+}
+
+
+.user-artists-grid .top-artist {
+  width: 40% !important;
+  padding: 16px !important /* 2 w rzędzie */
+}
+
+.user-artists-grid .top-artist img {
+  
+  height: 140px;
+  
+  
+}
+
+.user-tracks-grid .track-card {
+  width: 100%;
+}
+.user-tracks-grid .track-card img {
+  height: 240px;
+}
+.summary-box .green-button {
+  margin-top: 8px;
+}
+
+#user-artist-fav {
+  margin-top: -25px;
+}
+
+.login-popup-overlay {
+  padding: 16px;
+}
+
+.login-popup-box h2 {
+  font-size: 24px;
+}
+.login-popup-box {
+  gap: 16px;
+  padding: 24px;
+}
+
+.login-popup-box p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+
+
+}
+@media screen and (min-width: 768px) {
+  .playlist-analysis-container {
+      flex-direction: row !important;
+  }
+
+  .track-list {
+      display: block !important;
+      width: 50%;
+  }
+
+  .track-details {
+      display: block !important;
+      width: 50%;
+  }
+}
+  

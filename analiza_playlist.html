@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analiza Playlist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+
+</head>
+
+<body>
+    <header>
+        <div id="menu-container"></div>
+    </header>
+
+    <section class="hero-banner">
+        <h1 class="hero-text-center">Analiza Twoich playlist <span class="zielony">♪♪♪</span></h1>
+        <p class="hero-text-right">Wybierz playlistę i przeanalizuj jej utwory!</p>
+    </section>
+
+    <section class="playlist-container">
+        <div class="playlist-controls">
+            <div class="custom-select">
+                <div id="playlist-selector" class="playlist-selector">
+                  <span id="playlist-selector-text">Wybierz playlistę</span>
+                  <span class="playlist-arrow">▼</span>
+                </div>
+                <div id="playlist-options" class="playlist-options"></div>
+            </div>
+            <button class="green-button" id="analyze-playlist-btn">Analizuj</button>
+        </div>
+        
+    
+        <div class="playlist-analysis-container">
+            <div id="track-list" class="track-list">
+                <div id="track-loader" class="loader"></div>
+            </div>
+            <div id="track-details" class="track-details">
+                <span class="placeholder-text">Wybierz Utwór</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="top-artists-section" id="playlist-top-artist" style="display: none;">
+        <h2 class="playlist-top-artist-heading">🎤 Najczęściej pojawiający się artysta</h2>
+        <div class="playlist-top-artist-card" id="playlist-top-artist-card">
+          <!-- Wstrzykiwane dynamicznie -->
+        </div>
+    </section>
+
+    <section id="playlist-genres-section" style="display: none;">
+        <h2 class="playlist-genres-heading">📊 Kategorie gatunków na playliście</h2>
+        <div class="playlist-genres-chart-container">
+          <canvas id="genresChart"></canvas>
+        </div>
+      </section>
+      
+      
+      
+      
+    
+
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/spotifyAPI.js"></script>
+    <script src="js/playlist.js" defer></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

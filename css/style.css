@@ -1,0 +1,1571 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #0D0D0D;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 16px; /* Padding for smaller screens */
+    overflow-x: hidden;
+}
+
+.zielony {
+  color: #1ED65F;
+}
+
+/* Kontener na logo, które jest wyśrodkowane, bez fixed */
+.logo-container {
+    text-align: center; /* Centrowanie logo */
+    padding-top: 24px;  /* Dodanie marginesu od góry */
+    position: relative; /* Standardowa pozycja, żeby logo było normalnie na stronie */
+    transition: opacity 0.3s ease;
+}
+.logo-container img {
+  width: 156px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* Menu z kontenerem fixed, szerokość 800px, z marginesem 96px od góry */
+.menu-fixed-container {
+    position: fixed;
+    top: 96px;  /* Odległość menu od góry strony */
+    left: 50%;
+    transform: translateX(-50%); /* Wyśrodkowanie menu */
+    width: 100%;
+    max-width: 800px;
+    z-index: 1000; /* Upewniamy się, że menu jest na wierzchu */
+    display: flex;
+    justify-content: center; /* Rozmieszczenie kafelków równomiernie */
+    gap: 16px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-bottom: #4D4D4D 2px solid;
+    background-color: #0D0D0D;
+    transition: top 0.3s ease;
+}
+
+.menu-fixed-container .menu-item {
+    background-color: #4D4D4D;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    text-decoration: none; /* Usuwamy podkreślenie linku */
+    display: block; /* Zapewnia, że cały obszar jest klikalny */
+}
+
+/* Efekt hover */
+.menu-fixed-container .menu-item:hover {
+    background-color: #262626;
+    color: #1ed65f;
+}
+
+
+/* Zawartość strony */
+.content {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.large-content {
+    height: 2000px;
+}
+
+/* Hero banner section */
+
+.hero-banner {
+    width: 100%;
+    max-width: 800px;
+    margin: 96px auto;
+  
+    /* Ustawiamy flex container */
+    display: flex;
+    flex-direction: column; /* lub row - w zależności od potrzeb */
+    gap: 16px;       
+    
+}
+
+.hero-text-left {
+    position: static;
+    text-align: left;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    
+    color: white;
+}
+
+.hero-text-center {
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+.hero-text-right {
+    position: static;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+
+}
+
+.hero-image {
+    width: 100%;
+    margin-top: 25px;
+    
+}
+
+.hero-image-stats {
+  width: 100%;
+  margin-top: 25px;
+  max-height: 360px;
+  object-fit:contain;
+  
+}
+
+
+
+
+
+
+
+/* Sekcja informacyjna pod hero */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;  /* Odstęp od hero-bannera */
+  /* Jeśli chcesz zachować tę samą maksymalną szerokość co reszta (800px), możesz dodać: 
+     max-width: 800px; 
+     margin: 150px auto 0 auto;  */
+}
+
+.info-text {
+  width: 45%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Ustawia elementy jeden pod drugim */
+  gap: 32px; /* Ustawia odstęp 32px między elementami wewnątrz */
+}
+
+
+.info-text h2 {
+  font-size: 32px;
+  
+}
+
+.info-text p {
+  line-height: 1.4;
+  font-size:18px;
+  
+  
+}
+.pdwa {
+  margin-top: -8px;
+}
+
+.green-button {
+  background-color: #1ED65F;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-family: roboto, sans-serif;
+  align-self: flex-start;
+  box-shadow: 4px 8px 12px rgba(30, 214, 95, 0.2);
+
+}
+
+.green-button:hover {
+  background-color: #17b851;
+}
+
+.info-image {
+  width: 240px;
+  text-align: center; /* Jeśli chcesz wyśrodkować np. zdjęcie w pionie */
+}
+
+.info-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* Kontener dla całej sekcji z uslugami */
+.features-container {
+  text-align: center;
+  margin-top: 200px;
+  
+  max-width: 800px;
+  overflow:hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  
+}
+
+/* Nagłówek sekcji */
+.features-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+  text-align: left;
+}
+
+.features-header h2 {
+  font-size: 32px;
+  
+  color: #ffffff;
+}
+
+.features-header p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Pojedyncza funkcjonalność */
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  
+  overflow: visible;
+}
+
+/* Lewa sekcja */
+.feature-content {
+  width: 506px;
+  height: 222px;
+  background-color: #4d4d4d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 24px;
+  position: relative;
+  z-index: 1; /* Niższy niż obrazek */
+}
+
+/* Wewnętrzny box na tekst */
+.feature-text {
+  width: 336px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+  color: white;
+}
+
+/* Stylowanie tekstu */
+.feature-text h3 {
+  font-size: 24px;
+}
+
+.feature-text p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Prawa strona - obrazek */
+.feature-image {
+  width: 300px;
+  height: 194px;
+  margin-left: -146px; /* Ujemny margines */
+  z-index: 2; /* Wyższy niż tekst */
+}
+
+/* Zdjęcie */
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Styl przycisku */
+.service-button {
+  background-color: #1ED65F;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: inline-block;
+  width: 138px; /* Szerokość na sztywno */
+  text-align: center;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  box-shadow: 4px 8px 12px rgba(30, 214, 95, 0.2);
+}
+
+.service-button:hover {
+  background-color: #17b851;
+}
+
+/* Początkowe ukrycie elementów poza ekranem */
+.feature-content {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.feature-image {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Po wejściu w viewport - elementy wracają na miejsce */
+.feature.visible .feature-content {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.feature.visible .feature-image {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.feature-reverse {
+    justify-content: right;
+}
+
+
+
+
+
+/* Nagłówek sekcji */
+.features-header2 {
+  margin-bottom: 50px;
+}
+
+.features-header2 h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.features-header2 p {
+  color: #fff;
+}
+
+/* Pojedyncza funkcjonalność */
+.feature2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+}
+
+/* Lewa sekcja */
+.feature-content2 {
+  width: 506px;
+  height: 222px;
+  background-color: #4d4d4d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wewnętrzny box na tekst */
+.feature-text2 {
+  width: 336px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+  color: white;
+}
+
+/* Stylowanie tekstu */
+.feature-text2 h3 {
+  font-size: 24px;
+}
+
+.feature-text2 p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Prawa strona - obrazek */
+.feature-image2 {
+  width: 300px;
+  height: 194px;
+  margin-right: -146px; /* Ujemny margines */
+  z-index: 2;
+}
+
+/* Zdjęcie */
+.feature-image2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Styl przycisku */
+.service-button2 {
+  background-color: #1ED65F;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: inline-block;
+  width: 138px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  box-shadow: 4px 8px 12px rgba(30, 214, 95, 0.2);
+  text-shadow: rgba(0,0,0,0.3);
+
+}
+
+.service-button2:hover {
+  background-color: #17b851;
+}
+
+
+
+
+/* Początkowe ukrycie elementów poza ekranem */
+.feature-content2 {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.feature-image2 {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Po wejściu w viewport - elementy wracają na miejsce */
+.feature2.visible .feature-content2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.feature2.visible .feature-image2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Sekcja stopki */
+
+.site-footer {
+ 
+  
+  width: 100%;
+  max-width: 800px; /* lub inna szerokość, jak wolisz */
+  z-index: 9999;
+  margin-top: 200px;
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
+}
+.site-footer h3 {
+  font-size: 24px;
+  
+}
+/* GÓRNA CZĘŚĆ (footer-top) */
+.footer-top {
+  display: flex;
+  flex-direction: row;  /* jeśli chcesz kolumny obok siebie */
+  justify-content: space-between;
+  background-color: #262626; /* lub inny odcień szarości */
+  padding: 32px 32px 16px 32px;;
+  border-radius: 8px;
+}
+
+/* Pojedyncza kolumna w stopce */
+.footer-col {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-col1 {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Logo w kolumnie 1 */
+.footer-logo {
+  height: 64px;
+  width: 156px;
+  object-fit: contain;
+}
+
+/* Tekst opisowy w kolumnie 1 */
+.footer-description {
+  font-size: 18px;
+}
+
+/* Kolumna 2: lista linków */
+.footer-col ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  margin-top: -8px;
+}
+.footer-col li {
+  margin: 16px 0;
+}
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-col a:hover {
+  color: #1ED65F;
+}
+
+/* Kolumna 3: Social Media */
+.social-icons a {
+  margin-right: 16px;
+  color: #ffffff;
+  font-size: 32px;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #1ED65F; /* np. zielony */
+}
+
+/* DOLNA CZĘŚĆ (footer-bottom) */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* 2 paragrafy: lewy i prawy */
+  align-items: center;
+  padding: 24px 0; /* top i bottom = 24px */
+  border-top: 2px solid #4D4D4D; /* biała linia u góry */
+  margin-top: 16px; /* mały odstęp pod .footer-top */
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color:#1ED65F;
+  text-decoration: none;
+}
+
+/* PODSTRONA TOP ARTYŚCI 333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 */
+/* Styl dla przycisków sortowania */
+.sort-button {
+  
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: inline-block;
+  
+  text-align: center;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  
+  text-shadow: rgba(0,0,0,0.3);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sort-button.active {
+  background-color: #1ED65F;
+  color: #fff;
+  box-shadow: 4px 8px 12px rgba(30, 214, 95, 0.2);
+}
+
+.sort-button:not(.active) {
+  background-color: #4d4d4d; /* Szary dla nieaktywnego */
+  color: white;
+  box-shadow: 0px, 0px, 0px rgba(0, 0, 0, 0.1) !important; /* Usuwamy cień */
+}
+
+/* Kontener dla listy artystów */
+/* Kontener dla listy artystów */
+.artist-list-container {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  
+}
+.controls {
+  
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 8px;
+  
+}
+.inside-buttons {
+  display: flex; 
+  gap: 16px;
+}
+
+/* Tabela */
+#artists-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 8px; /* Tylko odstęp między wierszami */
+}
+
+/* Nagłówki */
+#artists-table thead {
+  background-color: #262626; /* Zielone tło */
+  color: white;
+  border-radius: 8px; /* Zaokrąglenia */
+}
+
+#artists-table th {
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+/* Pierwsza komórka nagłówka (zaokrąglona z lewej) */
+#artists-table th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+/* Ostatnia komórka nagłówka (zaokrąglona z prawej) */
+#artists-table th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+/* Stałe szerokości kolumn - sumują się do 100% */
+#artists-table th:nth-child(1), 
+#artists-table td:nth-child(1) {
+  width: 10%;
+  
+  font-weight: bold;
+  border-radius: 8px 0 0 8px;
+}
+
+#artists-table th:nth-child(2)
+ {
+  text-align: left;
+  width:40%; /* Teraz zajmuje całą przestrzeń */
+
+  
+}
+
+#artists-table th:nth-child(3), 
+#artists-table td:nth-child(3) {
+  width: 25%;
+  
+  
+}
+
+#artists-table th:nth-child(4), 
+#artists-table td:nth-child(4) {
+  width: 25%;
+  
+  border-radius: 0 8px 8px 0;
+}
+
+/* Wygląd tabeli */
+#artists-table {
+  color:white;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+/* CZCIONKI */
+#artists-table th {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+}
+
+/* Pozycja */
+.position {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nazwa artysty */
+.artist-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  flex-grow: 1; /* Pozwala na rozciągnięcie w prawo */
+}
+
+/* Liczba słuchaczy i trend */
+.listeners,
+.trend {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* Stylizacja trendu */
+.trend-positive {
+  color: green;
+}
+
+.trend-negative {
+  color: #dd153c;
+}
+
+/* Stylizacja zawartości komórki artysty */
+.artist-cell {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 24px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Zdjęcie artysty */
+.artist-cell img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+
+
+
+
+/* Wiersze tabeli */
+#artists-table tbody tr {
+  background-color: #4D4D4D;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+  transition: transform 0.2s ease-in-out;
+}
+#artists-table tbody tr:hover {
+  background-color: #262626; /* Ten sam kolor, co nagłówki */
+}
+
+
+/* Komórki tabeli */
+#artists-table td {
+  padding: 16px;
+  text-align: center;
+  
+}
+
+/* Pierwsza komórka w wierszu (zaokrąglona z lewej) */
+#artists-table td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+/* Ostatnia komórka w wierszu (zaokrąglona z prawej) */
+#artists-table td:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+
+
+
+
+/* top3art */
+
+/* Stylowanie top 3 artystów */
+/* KAFELKI - TOP 3 ARTYSTÓW */
+.top-artists-section {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  margin-top: 100px;
+  color: white;
+}
+
+.top-artists-section h3 {
+  font-size: 24px;
+  
+}
+
+/* Kafelki artystów */
+.top-artist {
+  width: 33%;
+  background-color: #4D4D4D;
+  padding: 16px;
+  border-radius: 8px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  
+}
+
+/* Top 1 (środek) */
+.top-main {
+  background-color: #262626;
+   /* Trochę większy, żeby się wyróżniał */
+  margin-top: 0;
+}
+
+/* Top 2 (lewa strona) */
+#top-artist-2 {
+  margin-top: 80px;
+}
+
+/* Top 3 (prawa strona) */
+#top-artist-3 {
+  margin-top: 160px;
+}
+
+
+/* Zdjęcie artysty */
+.top-artist img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.monthly-listeners-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  text-align: center;
+  
+  
+}
+.monthly-listeners {
+  color: #1ED65F;
+  font-size: 24px;
+  font-weight: bold;
+}
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  text-align: left;
+  align-items: start;
+  
+}
+.followers-section{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+  justify-content: left;
+}
+.artist-desc {
+  font-weight: 700;
+}
+.bold-artist-desc {
+  font-size: 14px;
+}
+
+.artist-grid {
+  display: none;
+}
+
+
+
+.artist-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.artist-card h3 {
+  font-size: 16px;
+  color: white;
+}
+
+.artist-card .listeners {
+  font-size: 14px;
+  color: white;
+}
+
+.artist-card .trend {
+  font-size: 14px;
+}
+
+/* =============================================================== */
+/* STYL DLA PODSTRONY: co_sie_teraz_slucha.html (JEDEN KAFELEK)    */
+/* =============================================================== */
+
+/* Sekcja, w której jest nasz kafelek */
+.single-song-section {
+  margin-top: -152px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;       /* odstęp między tytułem h2 a kafelkiem */
+  
+}
+
+#topsongimage {
+  margin-top: -41px;
+}
+
+.single-song-title {
+  font-size: 24px;
+  color: #fff;        /* biały tekst */
+  text-align: center;
+  font-weight: 700;
+  width: 50%;
+  line-height: 32px;
+}
+
+/* Główny kontener kafelka */
+.single-song-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;   /* tło kafelka */
+  max-width: 600px;
+  width: 40%;
+  padding: 24px;
+  border-radius: 8px;
+  gap: 24px;
+  text-align: center;
+}
+
+/* Okładka utworu */
+.single-song-cover img {
+  width: 100%;
+  border-radius: 8px;
+  
+}
+
+/* Nazwa piosenki */
+.single-song-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1ED65F; /* zielony akcent */
+  
+}
+
+/* Metadane (album, artyści, data) */
+.single-song-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  color: #ccc; /* jasna szarość */
+}
+
+.single-song-artists,
+.single-song-album,
+.single-song-release {
+  font-size: 16px;
+}
+
+/* Pogrubienie wewnątrz paragrafu (np. <strong>) */
+.single-song-meta strong {
+  color: #fff;
+}
+
+/* iFrame – odtwarzacz Spotify */
+.single-song-player {
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.my-playlist-embed {
+  border-radius: 12px;   /* zaokrąglenie rogów */
+  width: 100%;           /* szerokość na 100% kontenera */
+  height: 722px;         /* wysokość np. jak w Twoim przykładzie */
+  border: none;          /* usunięcie ramki */
+  outline: none;         /* usunięcie fokusa */
+}
+
+
+/* ===============================ANALIZA PLAYLIST================================ */
+/* Kontener na analizę playlisty */
+.playlist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 100px;
+}
+
+.playlist-analysis-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* Kontener na select i przycisk analizuj */
+.playlist-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.playlist-selector {
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 24px 0 16px;
+  border-radius: 8px;
+  background-color: #262626;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlist-arrow {
+  font-size: 18px;
+  color: #1ED65F;
+  pointer-events: none;
+}
+
+.playlist-options {
+  max-height: 250px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: #262626;
+  color: white;
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 8px;
+  z-index: 10;
+}
+
+.playlist-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.playlist-option:hover,
+.playlist-option.active {
+  background-color: #1ED65F;
+}
+
+
+
+/* Przycisk analizuj playlistę */
+.playlist-container .green-button {
+  height: 48px;
+  max-height: 48px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Lewa lista utworów */
+.track-list {
+  width: 50%;
+  max-height: 492px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 8px;
+  
+  background-color: transparent;
+  
+}
+
+.track-item {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  color: white;
+  background-color: #4D4D4D;
+  text-align: left;
+}
+.track-item:last-child {
+  margin-bottom: 0;
+}
+
+.track-item:hover {
+  background-color: #262626;
+}
+
+.track-item.active {
+  background-color: #1ED65F;
+  color: white;
+}
+
+/* Prawa strona ze szczegółami utworu */
+.track-details {
+  width: 50%;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #262626;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  min-height: 460px;
+  color: #fff;
+  
+}
+
+.track-details img {
+  max-width: 200px;
+  border-radius: 4px;
+}
+
+.track-details h3 {
+  margin-top: 24px;
+  font-size: 20px;
+  
+}
+
+.track-details p {
+  line-height: 21px;
+  font-size: 14px;
+  margin-top: 16px;
+  
+  
+}
+.track-details strong {
+  color:#17b851
+}
+
+/* Styl przycisku */
+.playlist-container .green-button {
+  height: 48px;
+  max-height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #1ED65F;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.playlist-container .green-button:hover {
+  background-color: #18b851;
+}
+
+
+/* Scrollbar stylowany (Chrome/Edge/Safari) */
+.track-list::-webkit-scrollbar,
+.playlist-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.track-list::-webkit-scrollbar, 
+.playlist-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.track-list::-webkit-scrollbar-track,
+.playlist-options::-webkit-scrollbar-track {
+  background-color: #262626;
+  border-radius: 8px;
+}
+
+.track-list::-webkit-scrollbar-thumb,
+.playlist-options::-webkit-scrollbar-thumb {
+  background-color: #1ED65F;
+  border-radius: 8px;
+  
+}
+
+.track-list::-webkit-scrollbar-thumb:hover,
+.playlist-options::-webkit-scrollbar-thumb:hover {
+  background-color: #17b851;
+}
+
+/* Domyślny loader – szary, nieruchomy */
+.loader {
+  border: 8px solid #333;
+  border-top: 8px solid #333; /* Na początku szary */
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  margin-top: 60%;
+  transform: translateY(-50%);
+  display: block;
+}
+
+/* Po kliknięciu "Analizuj" zmienia kolor na zielony i zaczyna się kręcić */
+.loader-active {
+  border-top-color: #1ED65F; /* Zmiana koloru na zielony */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+.placeholder-text {
+  
+  font-size: 16px;
+  font-weight: 700;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.back-to-list{
+  display: none;
+}
+
+/* Sekcja najczęstszego artysty */
+#playlist-top-artist {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Nagłówek nad kafelkiem */
+.playlist-top-artist-heading {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 32px;
+}
+
+/* Kafelek */
+.playlist-top-artist-card {
+  
+  
+  width: 33%;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap:48px;
+}
+
+.playlist-top-artist-card img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Nazwa artysty */
+.playlist-artist-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Liczba wystąpień */
+.playlist-artist-count {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1ED65F;
+  margin-bottom: 8px;
+}
+
+/* Kategorie gatunkow na playliscie */
+
+#playlist-genres-section {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.playlist-genres-heading {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.playlist-genres-chart-container {
+  width: 80%;
+  padding: 0px 16px;
+  border-radius: 0;
+  background-color: transparent; /* lub zostaw kolor tła, jeśli chcesz */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+
+#user-artist-fav {
+  margin-top: 0px;
+}
+
+.user-artists-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  
+}
+
+.user-artists-grid .top-artist {
+  background-color: #4D4D4D;
+  border-radius: 8px;
+  padding: 16px;
+  width: 15%;
+  min-width: 120px;
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.user-artists-grid .top-artist img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.user-artists-grid .top-artist h3 {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.user-tracks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  
+}
+
+.user-tracks-grid .track-card {
+  background-color: #4D4D4D;
+  border-radius: 8px;
+  padding: 16px;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.user-tracks-grid .track-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.user-tracks-grid .track-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1ED65F;
+  margin: 0;
+}
+
+.user-tracks-grid .track-artist,
+.user-tracks-grid .track-album {
+  
+  font-size: 14px;
+  color: white;
+}
+
+.user-tracks-grid iframe {
+  border: none;
+  border-radius: 8px;
+  height: 80px;
+}
+
+.summary-and-chart {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.summary-box,
+.genre-chart-box {
+  flex: 1 1 0;
+  min-width: 300px;
+  background-color: #262626;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  color: white;
+}
+
+.summary-title,
+.genre-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.summary-box p {
+  text-align: left;
+}
+
+
+
+.summary-box p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.6;
+}
+
+.summary-label {
+  color: #ccc;
+  font-weight: normal;
+}
+
+.summary-value {
+  font-weight: bold;
+  color: white;
+}
+
+
+.genre-chart-box canvas {
+  width: 100%;
+  height: auto;
+}
+
+.summary-box .green-button {
+  margin-top: 8px;
+}
+
+
+
+.login-popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(13, 13, 13, 1);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-popup-box {
+  position: relative; /* potrzebne do pozycjonowania wewnętrznych elementów absolutnie */
+  background: #4D4D4D;
+  padding: 32px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  width: 500px;
+  box-shadow: 0px 0px 30px #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  will-change: transform, opacity;
+}
+
+.login-popup-box h2 {
+  font-size: 32px;
+}
+
+.login-popup-box p {
+  font-size: 20px;
+}
+.popup-close-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.popup-close-icon:hover {
+  opacity: 1;
+}
+
+.login-space button {
+  margin-top: 8px;
+}
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.login-popup-box {
+  animation: slideInRight 0.4s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

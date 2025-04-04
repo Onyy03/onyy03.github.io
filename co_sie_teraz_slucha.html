@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Co Się Teraz Słucha</title>
+
+  <!-- Twoje style główne: style.css, plus ewentualnie responsive.css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- Ikony FontAwesome (opcjonalne) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Menu, ewentualnie wczytywane przez JS -->
+  <header>
+    <div id="menu-container"></div>
+  </header>
+
+  <!-- Hero Banner (zachowujemy układ i treść z wcześniejszych plików) -->
+  <section class="hero-banner">
+    <p class="hero-text-left"><span class="zielony" id="update-date">Ładowanie...</span></p>
+    <h1 class="hero-text-center">Przekonaj się sam, co jest teraz na topie!</h1>
+    <p class="hero-text-right">🔥 Najgorętsze utwory na Spotify</p>
+    <img src="images/korona.svg" alt="Hero Image" class="hero-image" id="topsongimage">
+  </section>
+
+  <!-- Sekcja z jednym kafelkiem (nowe klasy, aby nie kolidować z poprzednimi) -->
+  <section class="single-song-section">
+    <h2 class="single-song-title">
+      Najpopularniejszy Utwór W Tym Momencie:
+    </h2>
+    
+    <!-- Kafelek – wypełniany przez nowy JS (topsongs.js) -->
+    <div class="single-song-card" id="top-song-today">
+      <!-- Treść zostanie wstrzyknięta dynamicznie -->
+    </div>
+  </section>
+
+  <div class="features-container">
+    <!-- Nagłówek sekcji -->
+    <div class="features-header">
+        <h2>Top 50 Świat</h2>
+        <p>
+          Chcesz wiedzieć, co aktualnie rozgrzewa głośniki na całym globie? Od dynamicznych hitów z Los Angeles, przez klubowe brzmienia Londynu, aż po ekscentryczne hity z Tokio — odkryj najgorętsze tracki z najdalszych zakątków świata i pozwól się porwać międzynarodowej fali muzycznych emocji!
+        </p>
+    </div>
+    <iframe 
+      class="my-playlist-embed" 
+      src="https://open.spotify.com/embed/playlist/37i9dQZEVXbMDoHDwVN2tF?utm_source=generator" 
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+      </iframe>
+  </div>
+
+  <div class="features-container">
+    <!-- Nagłówek sekcji -->
+    <div class="features-header">
+        <h2>Top 50 USA</h2>
+        <p>
+          Amerykańska scena muzyczna wyznacza światowe trendy, a te najnowsze rodzą się właśnie tutaj. Wskocz do TOP 50 USA, by przekonać się, które kawałki są teraz na ustach wszystkich fanów muzyki od Nowego Jorku po Los Angeles — i przygotuj się na solidną dawkę hitów prosto z serca Stanów Zjednoczonych! 
+        </p>
+    </div>
+    <iframe 
+      class="my-playlist-embed" 
+      src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp?utm_source=generator" 
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+      </iframe>
+  </div>
+
+  <div class="features-container">
+    <!-- Nagłówek sekcji -->
+    <div class="features-header">
+        <h2>Top 50 Polska</h2>
+        <p>
+          Zastanawiasz się, co najczęściej leci w słuchawkach rodaków? Poznaj najświeższe polskie hity i zobacz, jak nasze rodzime brzmienia mieszają się z zagranicznymi inspiracjami. Wejdź do TOP 50 Polska i pozwól się ponieść muzycznej fali, która aktualnie króluje nad Wisłą! 
+        </p>
+    </div>
+    <iframe 
+      class="my-playlist-embed" 
+      src="https://open.spotify.com/embed/playlist/37i9dQZEVXbN6itCcaL3Tt?utm_source=generator" 
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+      </iframe>
+  </div>
+
+
+  <!-- Stopka (opcjonalnie) -->
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <!-- Skrypty JS: menu, footer, główny skrypt z kafelkiem -->
+  <script src="js/script.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <script src="js/topsongs.js" defer></script>
+  <script src="js/auth.js"></script>
+  <script src="js/spotifyAPI.js"></script>
+</body>
+</html>

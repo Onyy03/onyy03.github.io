@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twoje Statystyki</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div id="menu-container"></div>
+    </header>
+
+    <section class="hero-banner">
+        <h1 class="hero-text-center">Twoje Statystyki <span class="zielony">♬</span></h1>
+        <p class="hero-text-right">Przeanalizuj swój profil!</p>
+        <img src="images/statystyki_hero.webp" alt="Hero Image" class="hero-image-stats">
+    </section>
+
+    <section class="features-container" id="user-artist-fav">
+        <div class="features-header">
+          <h2>🎧 Twoi ulubieni twórcy (ostatnie 4 tygodnie)</h2>
+          <p>Oto artyści, których słuchałeś najczęściej w ostatnim czasie.</p>
+          
+        </div>
+      
+        <div id="top-user-artists" class="user-artists-grid">
+
+          <!-- Kafelki będą tu wstrzykiwane dynamicznie przez JS -->
+        </div>
+        </section>
+
+        <section class="features-container">
+            <div class="features-header">
+              <h2>♪♪ Twoje ulubione utwory (ostatnie 4 tygodnie)</h2>
+              <p>10 kawałków, których słuchałeś najczęściej w ciągu ostatnich 4 tygodni.</p>
+            </div>
+          
+            <div id="top-user-tracks" class="user-tracks-grid">
+              <!-- Utwory będą wstrzykiwane z JS -->
+            </div>
+        </section>
+
+        <section class="features-container">
+            <div class="features-header">
+              <h2>📊 Podsumowanie i dominujące gatunki</h2>
+              <p>Szybki przegląd 50 twoich ostatnich przesłuchanych utworów, podsumowanie oraz analiza ulubionych gatunków na podstawie ulubionych artystów.</p>
+            </div>
+          
+            <!-- Lewa kolumna: podsumowanie -->
+            <div class="summary-box">
+                <h3 class="summary-title">🧠 Podsumowanie</h3>
+                <p><span class="summary-label">Liczba obserwowanych artystów:</span> <span class="summary-value" id="followed-artists-count">...</span></p>
+                <p><span class="summary-label">Najczęściej słuchany utwór:</span> <span class="summary-value" id="most-played-track">...</span></p>
+                <p><span class="summary-label">Łączny czas słuchania ostatnich 50 utworów:</span> <span class="summary-value" id="listening-time">...</span></p>
+
+                <button class="green-button" id="export-excel">Pobierz historię słuchania</button>
+            </div>
+            
+            <!-- Prawa kolumna: wykres -->
+            <div class="genre-chart-box">
+                <h3 class="genre-title">🎧 Dominujące gatunki</h3>
+                <canvas id="userGenresChart"></canvas>
+            </div>
+  
+          </section>
+          
+          
+      
+
+    
+
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/spotifyAPI.js"></script>
+    <script src="js/analiza.js" defer></script> <!-- 🧠 Nowy plik -->
+    <script src="js/auth.js"></script>
+</body>
+</html>

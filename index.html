@@ -3,9 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>CSTS</title>
 </head>
 <body>
-    test
+    <div id="menu-container"></div>
+
+    <!-- Najpierw wczytujemy script.js, bo tam jest initMenu() -->
+    <script src="js/script.js"></script>
+    <!-- Potem menu.js, który używa initMenu() -->
+    <script src="js/menu.js"></script>
+
+    <div class="hero-banner">
+        <p class="hero-text-left">Skoro tu trafiłeś, pewnie się zastanawiasz</p>
+        <h1 class="hero-text-center"><span class="zielony">C</span>o <span class="zielony">S</span>ię <span class="zielony">T</span>eraz <span class="zielony">S</span>łucha?</h1>
+        <p class="hero-text-right">Bądź na czasie z muzycznymi trendami</p>
+        <img src="images/tlooo.webp" alt="Hero Image" class="hero-image">
+    </div>
+
+    <div class="info-section">
+        <div class="info-text">
+          <h2>Twój muzyczny przewodnik</h2>
+          <p>
+            Chcesz przeanalizować rynek muzyczny i sprawdzić najnowsze trendy? A może interesują Cię statystyki Twojego konta Spotify – ulubieni artyści, najczęściej słuchane utwory i muzyczne nawyki?
+          </p>
+          <p class="pdwa">CSTS to kompleksowe narzędzie, które pozwoli Ci odkryć świat muzyki na nowo. Analizuj swój profil, śledź trendy i zyskaj szybki dostęp do najważniejszych danych – wszystko w jednym miejscu! </p>
+          <button class="green-button" id="spotify-login-btn">ZALOGUJ SIĘ</button>
+        </div>
+        <div class="info-image">
+          <!-- Tymczasowy placeholder: logo.png -->
+          <picture>
+            <source srcset="images/phone_mobile.webp" media="(max-width: 767px)">
+            <img src="images/phone.webp" alt="Hero image">
+          </picture>
+          
+        </div>
+      </div>
+
+
+    
+
+    
+
+    <!-- Sekcja Funkcjonalności -->
+    <div class="features-container">
+        <!-- Nagłówek sekcji -->
+        <div class="features-header">
+            <h2>Odkryj możliwości CSTS</h2>
+            <p>
+                Kiedy zadasz sobie pytanie, jakie piosenki są teraz popularne, kto znajduje się pośród TWOICH ulubionych artystów, 
+                bądź jakie gatunki muzyczne królują w playlistach, użyj tej aplikacji, aby uzyskać wszystkie potrzebne informacje!
+            </p>
+        </div>
+    
+        <!-- Pojedyncza funkcjonalność -->
+        <div class="feature">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h3>Co się teraz słucha?</h3>
+                    <p>Dowiedz się, czego właśnie słuchają inni! Kliknij, aby zobaczyć dzisiejsze najczęściej odtwarzane utwory.</p>
+                    <button class="service-button" data-target="co_sie_teraz_slucha.html">SPRAWDZAM</button>
+                </div>
+            </div>
+            <div class="feature-image">
+                <picture>
+                    <source srcset="images/phone_csts.webp" media="(max-width: 767px)">
+                    <img src="images/cstshref.webp" alt="CSTS">
+                </picture>
+                
+            </div>
+        </div>
+        
+        
+        <!-- Pojedyncza funkcjonalność -->
+        <div class="feature2">
+            <div class="feature-image2">
+                
+                <picture>
+                    <source srcset="images/phone_topartist.webp" media="(max-width: 767px)">
+                    <img src="images/topartisthref.webp" alt="Top artyści">
+                </picture>
+            </div>
+            <div class="feature-content2">
+                <div class="feature-text2">
+                    <h3>Jacy artyści są na topie?</h3>
+                    <p>Chcesz przekonać się kto aktualnie jest najpopularniejszym artystą? Wyniki mogą cię zaskoczyć!</p>
+                    <button class="service-button2" data-target="top_artysci.html">SPRAWDZAM</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h3>Analiza playlist</h3>
+                    <p>Odkryj co skrywają twoje playlisty, przekonaj się jakie gatunki w nich dominują.</p>
+                    <button class="service-button" data-target="analiza_playlist.html">ANALIZA</button>
+                </div>
+            </div>
+            <div class="feature-image">
+                <picture>
+                    <source srcset="images/phone_playlist.webp" media="(max-width: 767px)">
+                    <img src="images/playlisthref.webp" alt="Analiza playlist">
+                </picture>
+                
+            </div>
+        </div>
+        
+        <!-- Pojedyncza funkcjonalność -->
+        <div class="feature2">
+            <div class="feature-image2">
+                <picture>
+                    <source srcset="images/phone_stats.webp" media="(max-width: 767px)">
+                    <img src="images/statystykihref.webp" alt="Twoje statystyki">
+                </picture>
+                
+            </div>
+            <div class="feature-content2">
+                <div class="feature-text2">
+                    <h3>Twoje statystyki</h3>
+                    <p>Odkryj Twoich ulubionych wykonawców oraz poznaj piosenki, które leciały u ciebie na okragło.</p>
+                    <button class="service-button2" data-target="twoje_statystyki.html">SPRAWDZAM</button>
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="js/spotifyAPI.js"></script>
+    <script>
+        document.getElementById("spotify-login-btn").addEventListener("click", loginSpotify);
+    </script>
+      
+    <div id="footer-container"></div>
+    <script src="js/footer.js"></script>
 </body>
 </html>
