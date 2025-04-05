@@ -22,7 +22,7 @@ async function loadTopArtists() {
 
         allArtists.forEach(artist => {
             artist.id = artist.spotifyUrl.split('/')[4]; 
-            artist.imageUrl = artist.image || "images/placeholder.jpg"; 
+            artist.imageUrl = artist.image || "images/placeholder.png"; 
         });
 
         sortArtists(currentSort);
@@ -209,7 +209,7 @@ async function displayTop3Artists() {
                 <p>Słuchaczy w miesiącu:</p>
                 <p class="monthly-listeners">${numberFormat(artist.listeners)}</p>
             </div>
-            <img class="artist-image" src="${artistData.images[0]?.url || 'images/placeholder.jpg'}" alt="${artist.name}">
+            <img class="artist-image" src="${artistData.images[0]?.url || 'images/placeholder.png'}" alt="${artist.name}">
             <h3>${artist.name}</h3>
             <div class="artist-info">
                 <div class="followers-section">

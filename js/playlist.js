@@ -214,7 +214,7 @@ async function analyzePlaylist(token, playlistId) {
                     headers: { Authorization: `Bearer ${token}` }
                 }).then(res => res.json());
 
-                const imageUrl = artistData.images?.[0]?.url || "https://via.placeholder.com/200";
+                const imageUrl = artistData.images?.[0]?.url || "images/placeholder.png";
 
                 const section = document.getElementById("playlist-top-artist");
                 const container = document.getElementById("playlist-top-artist-card");

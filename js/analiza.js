@@ -118,7 +118,7 @@ async function showTopUserArtists() {
             card.className = "top-artist"; // styl taki jak na top_artysci.html
 
             card.innerHTML = `
-                <img src="${artist.images[0]?.url || 'placeholder.jpg'}" alt="${artist.name}">
+                <img src="${artist.images[0]?.url || 'images/placeholder.png'}" alt="${artist.name}">
                 <h3>${artist.name}</h3>
             `;
 
