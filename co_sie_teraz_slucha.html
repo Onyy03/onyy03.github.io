@@ -5,22 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Co Się Teraz Słucha</title>
 
-  <!-- Twoje style główne: style.css, plus ewentualnie responsive.css -->
+  
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-  <!-- Ikony FontAwesome (opcjonalne) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
   />
 </head>
 <body>
-  <!-- Menu, ewentualnie wczytywane przez JS -->
+  
   <header>
     <div id="menu-container"></div>
   </header>
 
-  <!-- Hero Banner (zachowujemy układ i treść z wcześniejszych plików) -->
+ 
   <section class="hero-banner">
     <p class="hero-text-left"><span class="zielony" id="update-date">Ładowanie...</span></p>
     <h1 class="hero-text-center">Przekonaj się sam, co jest teraz na topie!</h1>
@@ -28,20 +27,20 @@
     <img src="images/korona.svg" alt="Hero Image" class="hero-image" id="topsongimage">
   </section>
 
-  <!-- Sekcja z jednym kafelkiem (nowe klasy, aby nie kolidować z poprzednimi) -->
+ 
   <section class="single-song-section">
     <h2 class="single-song-title">
       Najpopularniejszy Utwór W Tym Momencie:
     </h2>
     
-    <!-- Kafelek – wypełniany przez nowy JS (topsongs.js) -->
+    
     <div class="single-song-card" id="top-song-today">
-      <!-- Treść zostanie wstrzyknięta dynamicznie -->
+      
     </div>
   </section>
 
   <div class="features-container">
-    <!-- Nagłówek sekcji -->
+   
     <div class="features-header">
         <h2>Top 50 Świat</h2>
         <p>
@@ -59,7 +58,7 @@
   </div>
 
   <div class="features-container">
-    <!-- Nagłówek sekcji -->
+   
     <div class="features-header">
         <h2>Top 50 USA</h2>
         <p>
@@ -77,7 +76,7 @@
   </div>
 
   <div class="features-container">
-    <!-- Nagłówek sekcji -->
+  
     <div class="features-header">
         <h2>Top 50 Polska</h2>
         <p>
@@ -95,12 +94,12 @@
   </div>
 
 
-  <!-- Stopka (opcjonalnie) -->
+  
   <footer>
     <div id="footer-container"></div>
   </footer>
 
-  <!-- Skrypty JS: menu, footer, główny skrypt z kafelkiem -->
+  
   <script src="js/script.js" defer></script>
   <script src="js/menu.js" defer></script>
   <script src="js/footer.js" defer></script>

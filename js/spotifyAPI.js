@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         const token = localStorage.getItem("spotify_token");
         if (token) {
-            // Opcjonalnie: sprawdzenie czy token nadal działa
+            //sprawdzenie czy token nadal działa
             testToken(token).catch(() => {
                 showSessionExpiredAndLogout();
             });
@@ -172,7 +172,7 @@ function showLoginPopup() {
     const popup = document.getElementById("login-popup");
     if (popup) {
         popup.style.display = "flex";
-        document.body.style.overflow = "hidden"; // 🔒 Zablokuj scroll
+        document.body.style.overflow = "hidden"; //Zablokuj scroll
     }
 
     const loginBtn = document.getElementById("login-popup-btn");
@@ -184,7 +184,7 @@ function showLoginPopup() {
     if (closeBtn) {
         closeBtn.onclick = () => {
             popup.style.display = "none";
-            document.body.style.overflow = ""; // 🔓 Odblokuj scroll
+            document.body.style.overflow = ""; // Odblokuj scroll
             window.location.href = "index.html";
         };
     }

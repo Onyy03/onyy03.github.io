@@ -1,4 +1,3 @@
-// analiza.js (pełna analiza playlist, artystów, najczęstszy utwór)
 
 const token = localStorage.getItem("spotify_token");
 
@@ -115,7 +114,7 @@ async function showTopUserArtists() {
 
         data.items.forEach(artist => {
             const card = document.createElement("div");
-            card.className = "top-artist"; // styl taki jak na top_artysci.html
+            card.className = "top-artist"; 
 
             card.innerHTML = `
                 <img src="${artist.images[0]?.url || 'images/placeholder.png'}" alt="${artist.name}">

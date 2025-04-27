@@ -1,4 +1,3 @@
-// topsongs.js
 
 /**
  * Pobiera JSON z top piosenkami i wypełnia jeden kafelek #top-song-today.
@@ -42,7 +41,7 @@ async function loadSingleTopSong() {
       // iFrame do Spotify
       const embedUrl = `https://open.spotify.com/embed/track/${topSong.spotifyId}`;
   
-      // Składamy kafelek
+      
       document.getElementById('top-song-today').innerHTML = `
         <div class="single-song-cover">
           <img src="${topSong.image}" alt="${topSong.name}" />
@@ -72,7 +71,7 @@ async function loadSingleTopSong() {
     }
   }
   
-  // Po załadowaniu DOM
+ 
   document.addEventListener('DOMContentLoaded', () => {
     loadSingleTopSong();
   });

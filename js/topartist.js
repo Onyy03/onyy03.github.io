@@ -70,7 +70,7 @@ function displayNextArtists(reset = false) {
         gridContainer.innerHTML = "";
     }
 
-    // Pobieramy tylko `artistsPerPage` kolejnych artystów
+    
     const nextArtists = allArtists.slice(displayedArtists, displayedArtists + artistsPerPage);
 
     nextArtists.forEach((artist, index) => {
@@ -105,7 +105,7 @@ function displayNextArtists(reset = false) {
         }
     });
 
-    // **Teraz poprawnie zwiększamy licznik wyświetlonych artystów**
+    // **zwiększamy licznik wyświetlonych artystów**
     displayedArtists += artistsPerPage;
 
     // Jeśli nie ma już więcej artystów, ukrywamy przycisk

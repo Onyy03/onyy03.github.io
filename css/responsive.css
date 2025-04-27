@@ -44,7 +44,7 @@
   }
   .user-artists-grid .top-artist {
     width: 25%;
-    padding: 16px !important /* 3 w rzędzie */
+    padding: 16px !important 
   }
 }
 
@@ -68,7 +68,7 @@
   
     a {
       text-decoration: none;
-      color: white; /* możesz zmienić na inny kolor */
+      color: white; 
     }
   
     /* --- Mobilne menu off-screen --- */
@@ -105,10 +105,10 @@
       left: 0;
       right: 0;
       display: flex;
-      align-items: center;  /* klucz do pionowego wyśrodkowania */
+      align-items: center;  
       justify-content: space-between;
-      background-color: #262626;  /* przykładowy kolor */
-      padding: 8px 16px;          /* odstęp góra/dół: 8px, boki: 16px */
+      background-color: #262626; 
+      padding: 8px 16px;         
       height: 58px;
       z-index: 9999;
     }
@@ -172,13 +172,13 @@
   
     .no-scroll {
       overflow-y: hidden;
-      touch-action: none; /* dla pewnych starszych urządzeń */
+      touch-action: none; 
     }
   
-    /* --- Margines górny, by treść nie chowała się pod nav --- */
+  
     body {
-      margin-top: 56px; /* Równe height paska nawigacji */
-      padding: 0 16px; /* Adjust padding for mniejsze ekrany */
+      margin-top: 56px; 
+      padding: 0 16px; 
     }
   
     .hero-banner {
@@ -188,11 +188,11 @@
     }
   
     .menu-fixed-container {
-      top: 56px; /* Zmniejszone dla menu mobilnego */
+      top: 56px; 
     }
   
     .hero-text-center {
-      font-size: 32px; /* Reduced font size for h1 */
+      font-size: 32px;
       color: white;
       text-align: center;
       text-transform: capitalize;
@@ -212,7 +212,7 @@
     }
   
     .hero-image {
-      margin-top: 24px; /* Adjust margin for mniejsze ekrany */
+      margin-top: 24px; 
     }
     .hero-image-stats{
       margin-top: 24px;
@@ -224,22 +224,22 @@
   
     
     .features-header {
-        /* Podobna struktura jak w .info-section */
-        margin-top: 0; /* Jeśli chcesz przesunąć w górę/dół */
+        
+        margin-top: 0; 
         display: flex;
         flex-direction: column;
         align-items: left;
         text-align: left;
-        gap: 24px; /* Odstęp między elementami */
+        gap: 24px; 
       }
     
       .features-header h2 {
-        font-size: 24px; /* Pomniejszamy w stosunku do desktopa */
+        font-size: 24px; 
       }
     
       .features-header p {
         font-size: 16px;
-        /* Możesz dodać line-height, np. line-height: 1.4; */
+        
       }
     /* --- Feature2 --- */
     .feature2 {
@@ -301,7 +301,7 @@
       }
     
       .feature-image {
-        position: static; /* Resetujemy absolute dla mobilnych */
+        position: static; 
         width: 100%;
         height: 180px;
         margin-left: 0px;
@@ -344,8 +344,8 @@
     width: 100%;
     color: #ffffff;
     display: flex;
-    flex-direction: column; /* Ustawia elementy jeden pod drugim */
-    gap: 24px; /* Ustawia odstęp 32px między elementami wewnątrz */
+    flex-direction: column; 
+    gap: 24px; 
   }
 
   
@@ -375,7 +375,7 @@
   .info-image {
     
     width: 65%;
-    text-align: center; /* Jeśli chcesz wyśrodkować np. zdjęcie w pionie */
+    text-align: center; 
   }
   
   .info-image img {
@@ -406,7 +406,7 @@
   .footer-description {
     font-size: 16px;
   }
-  .footer-logo {   /* dostosuj w razie potrzeby */
+  .footer-logo {   
     height: 64px;
     width: 128px;
     object-fit: contain;
@@ -423,11 +423,11 @@
 
   .footer-bottom {
     flex-direction: column;
-    justify-content: center; /* 2 paragrafy: lewy i prawy */
+    justify-content: center; 
     align-items: center;
     text-align: center;
     gap: 24px;
-    margin-top: 24px 0px; /* mały odstęp pod .footer-top */
+    margin-top: 24px 0px; 
   }
   
   .footer-bottom p {
@@ -477,14 +477,14 @@
 }
 
 .artist-grid {
-  display: flex;       /* Usunięto display: none; */
-  flex-wrap: wrap;     /* Dzięki temu kafelki zawijają się do nowej linii */
+  display: flex;       
+  flex-wrap: wrap;    
   gap: 16px;
   margin-top: 16px;
 }
 
 .artist-card {
-  background-color: #4D4D4D; /* Ewentualnie red, jeśli testujesz */
+  background-color: #4D4D4D; 
   border-radius: 8px;
   padding: 16px;
   text-align: center;
@@ -494,17 +494,17 @@
   gap: 12px;
   width: 45%;
   max-width: 100%;
-  flex-grow: 1; /* !important nie jest konieczne, usuń je dla czystości kodu */
+  flex-grow: 1; 
 }
 
 /* =============================================================== */
 /* STYL DLA PODSTRONY: co_sie_teraz_slucha.html (JEDEN KAFELEK)    */
 /* =============================================================== */
 
-/* Sekcja, w której jest nasz kafelek */
+
 .single-song-section {
   margin-top: -100px;
-  gap: 24px;       /* odstęp między tytułem h2 a kafelkiem */
+  gap: 24px;       
   
 }
 
@@ -521,7 +521,7 @@
 
 /* Główny kontener kafelka */
 .single-song-card {
-     /* tło kafelka */
+     
   max-width: 100%;
   width: 100%;
   padding: 16px;
@@ -562,7 +562,7 @@
 
 .my-playlist-embed {
   
-  height: 470px;         /* wysokość np. jak w Twoim przykładzie */
+  height: 470px;         
          
 }
 

@@ -1,4 +1,3 @@
-// playlist.js
 
 // Pomocnicza funkcja do opóźnienia zapytań (rate limiting)
 function delay(ms) {
@@ -60,7 +59,7 @@ async function fetchPlaylistTracks(token, playlistId) {
     return tracks;
 }
 
-// Poprawiona funkcja loadUserPlaylists()
+
 async function loadUserPlaylists() {
     const token = localStorage.getItem('spotify_token');
     
@@ -71,7 +70,7 @@ async function loadUserPlaylists() {
     const optionsContainer = document.getElementById('playlist-options');
     selectorText.textContent = 'Wybierz playlistę';
 
-    optionsContainer.innerHTML = ''; // ważne!
+    optionsContainer.innerHTML = ''; 
 
     playlists.forEach(playlist => {
         const optionDiv = document.createElement('div');
@@ -140,7 +139,7 @@ async function analyzePlaylist(token, playlistId) {
         // Wstawienie utworów do listy
         
 
-        // 🔍 Analiza artystów i gatunków z cache i opóźnieniem
+        // Analiza artystów i gatunków z cache i opóźnieniem
         const artistCount = {};
         const genreCount = {};
         const genreCache = {};
@@ -185,7 +184,7 @@ async function analyzePlaylist(token, playlistId) {
             }
         }
 
-        // 🟢 Dopiero teraz – po analizie – pokazujemy utwory
+        //po analizie – pokazujemy utwory
         tracks.forEach((item) => {
             const track = item.track;
             const trackDiv = document.createElement("div");
@@ -199,9 +198,9 @@ async function analyzePlaylist(token, playlistId) {
 
 
         // Wyniki w konsoli
-        console.log("🎤 Najczęściej pojawiający się artysta:", topArtist, `(${topCount}x)`);
-        console.log("📊 Liczba wystąpień artystów:", artistCount);
-        console.log("🎼 Gatunki na playliście:", genreCount);
+        console.log("Najczęściej pojawiający się artysta:", topArtist, `(${topCount}x)`);
+        console.log("Liczba wystąpień artystów:", artistCount);
+        console.log("Gatunki na playliście:", genreCount);
         const artistEntry = tracks
             .map(item => item.track?.artists)
             .flat()
@@ -232,7 +231,7 @@ async function analyzePlaylist(token, playlistId) {
             }
         }
 
-        // 🎨 Top gatunki - przekształć dane
+        // Top gatunki 
         const sortedGenres = Object.entries(genreCount)
             .sort((a, b) => b[1] - a[1]);
 
@@ -248,7 +247,7 @@ async function analyzePlaylist(token, playlistId) {
         const genreValues = topGenres.map(g => g[1]);
         const total = genreValues.reduce((sum, val) => sum + val, 0);
 
-        // 🎨 Generuj kolory – pierwszy zielony, reszta losowe
+        // kolory – pierwszy zielony, reszta losowe
         const genreColors = genreLabels.map((_, i) => {
         if (i === 0) return '#1ED760'; // Spotify green
         const hue = (i * 37) % 360; // rozrzucone kolory HSL
@@ -256,10 +255,10 @@ async function analyzePlaylist(token, playlistId) {
         });
 
 
-        // 🎯 Pokazujemy sekcję
+        //Pokazujemy sekcję
         document.getElementById("playlist-genres-section").style.display = "flex";
 
-        // 🧹 Usuń poprzedni wykres jeśli istnieje
+        //Usuń poprzedni wykres jeśli istnieje
         if (window.genreChartInstance) {
         window.genreChartInstance.destroy();
         }

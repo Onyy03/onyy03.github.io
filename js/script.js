@@ -1,8 +1,7 @@
-// script.js
 
 // Funkcja wywoływana za każdym razem, gdy menu zostanie wczytane
 function initMenu() {
-    // 1. Obsługa desktopu (animacja scrolla)
+    //Obsługa desktopu (animacja scrolla)
     const menu = document.querySelector('.menu-fixed-container');
     const logo = document.querySelector('.logo-container');
 
@@ -18,9 +17,8 @@ function initMenu() {
         });
     }
 
-    // 2. Obsługa mobilnego off-screen menu
-    // Zamiast .hamburger-menu i .mobile-menu
-    // używamy .ham-menu i .off-screen-menu
+    // Obsługa mobilnego off-screen menu
+
     const hamMenu = document.querySelector('.ham-menu');
     const offScreenMenu = document.querySelector('.off-screen-menu');
     const body = document.body;
@@ -44,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Sprawdzamy szerokość ekranu
     if (window.innerWidth > 767) {
-        // Jeśli mamy desktop/tablet – używamy Intersection Observera
+        // Jeśli mamy desktop/tablet – Intersection Observera
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -81,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const favicon = document.createElement("link");
     favicon.rel = "icon";
     favicon.type = "image/webp";
-    favicon.href = "images/cstsfavicon.webp"; // lub favicon.ico
+    favicon.href = "images/cstsfavicon.webp"; 
     document.head.appendChild(favicon);
   });
   
